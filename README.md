@@ -142,20 +142,14 @@ student_training.py
 
 ---
 
-## ✍️ Author
+## ✍️ Authors
 
-**Ayush Sharma**
-Java & Deep Learning Research
-GitHub: [@yourgithub](https://github.com/AyushS1304)
-LinkedIn: [linkedin.com/in/Ayush](https://www.linkedin.com/in/ayush-sharma-6219352b1/)
-**Dhruv Agarwal**
-Image Enhancement & Deep Learning Research
-GitHub: [@yourgithub](https://github.com/Dhruv610ag)
-LinkedIn: [linkedin.com/in/dhruv](https://www.linkedin.com/in/dhruv-agarwal-773b32287)
-**Aniket Shah**
-Front end Developer
-GitHub: [@yourgithub](https://github.com/AyushS1304)
-LinkedIn: [linkedin.com/in/Ayush](https://www.linkedin.com/in/aniket-shah-b1b008250/)
+| Name            | Role                                | GitHub                                                | LinkedIn                                                |
+|-----------------|-------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
+| **Ayush Sharma** | Java & Deep Learning Researcher     | [@AyushS1304](https://github.com/AyushS1304)           | [Ayush Sharma](https://linkedin.com/in/Ayush)            |
+| **Dhruv Agarwal** | Image Enhancement & DL Researcher  | [@Dhruv610ag](https://github.com/yourgithub)           | [Dhruv Agarwal](https://linkedin.com/in/dhruv)           |
+| **Aniket Shah**  | Frontend Developer                  | [@Aniketshah2004](https://github.com/yourgithub)           | [Aniket Shah](https://linkedin.com/in/AniketShah)        |
+
 ---
 
 ## 💬 Acknowledgements
