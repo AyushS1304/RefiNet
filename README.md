@@ -148,7 +148,7 @@ student_training.py
 |-----------------|-------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
 | **Ayush Sharma** | Java & Deep Learning Researcher     | [@AyushS1304](https://github.com/AyushS1304)           | [Ayush Sharma](https://linkedin.com/in/Ayush)            |
 | **Dhruv Agarwal** | Image Enhancement & DL Researcher  | [@Dhruv610ag](https://github.com/yourgithub)           | [Dhruv Agarwal](https://linkedin.com/in/dhruv)           |
-| **Aniket Shah**  | Frontend Developer                  | [@Aniketshah2004](https://github.com/yourgithub)           | [Aniket Shah](https://linkedin.com/in/AniketShah)        |
+| **Aniket Shah**  | Frontend Developer                  | [@Aniket200424](https://github.com/Aniket200424)           | [Aniket Shah](https://linkedin.com/in/AniketShah)        |
 
 ---
 
