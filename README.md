@@ -56,6 +56,35 @@ A PyTorch-based implementation of a lightweight **Multi-Scale Attention Fusion N
   - Gaussian noise
   - Bicubic downsample + upscale for LR generation
 
+## 📦 Vimeo-90K Dataset
+- The Vimeo-90K dataset is a large-scale, high-quality video dataset commonly used for video enhancement tasks such as video super-resolution, frame interpolation, and video denoising. It was introduced in the paper:
+
+- TOFlow: Video Enhancement with Task-Oriented Flow
+Tianfan Xue, Baian Chen, Jiajun Wu, Donglai Wei, William T. Freeman
+
+## 📁 Structure
+- The dataset contains 91,701 video clips, each consisting of 7 consecutive frames (448×256 resolution). It includes two main subsets:
+
+- Vimeo-90K Septuplet – used for tasks like super-resolution, denoising, and deblurring
+
+- Vimeo-90K Triplet – often used for video frame interpolation
+
+- Each clip is organized in a folder containing PNG images named im1.png through im7.png.
+
+
+## 🔍 Applications
+- Video Super-Resolution
+
+- Frame Interpolation
+
+- Motion Compensation
+
+- Video Denoising
+
+- Optical Flow Estimation
+
+
+
 ---
 
 ## 🧪 Loss Functions
