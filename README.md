@@ -141,9 +141,9 @@ tqdm==4.65.0
 
 | Parameter       | Value                    |
 | --------------- | ------------------------ |
-| Epochs          | 35                       |
+| Epochs          | 40                       |
 | Batch Size      | 64                       |
-| Patch Size      | 48×48                    |
+| Patch Size      | 64X64                    |
 | Optimizer       | AdamW                    |
 | Scheduler       | ReduceLROnPlateau        |
 | Mixed Precision | ✅ Yes (`torch.cuda.amp`) |
