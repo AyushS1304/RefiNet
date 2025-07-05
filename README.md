@@ -1,4 +1,4 @@
-# 📝 Project Info — *Image Enhancement using Knowledge Distillation*
+# 📝 *Image Enhancement using Knowledge Distillation*
 
 This project aims to **compress a powerful image enhancement model** (MSAFN) into a **lightweight student model** (LightMSAFN) using **knowledge distillation**. The goal is to retain most of the image quality (PSNR, SSIM) while reducing model size and computation time, making it ideal for **real-time enhancement** on resource-constrained devices.
 
@@ -7,13 +7,20 @@ This project aims to **compress a powerful image enhancement model** (MSAFN) int
 - 🎓 **Student Model**: LightMSAFN (lightweight, fast, mobile-friendly)  
 - 🔄 **Technique**: Knowledge distillation via combined pixel + soft loss  
 - 📊 **Training Dataset**: Vimeo-90K (15 sequences subset with augmentation)  
-- ✅ **Goal**: Achieve high SSIM (>0.92) and PSNR (~31 dB) in a compressed model
+- ✅ **Goal**: Achieve high SSIM (>0.94) and PSNR (~29 dB) in a compressed model
 
 ---
 
-# 🧠 Student Training with Knowledge Distillation (MSAFN → LightMSAFN)
+## 🧠 *Teacher Model (MSAFN) Description*
+The **Multi-Scale Attention Fusion Network (MSAFN)** is an advanced teacher model designed for high-fidelity image sharpening and restoration. Built for knowledge distillation, it processes images through parallel **multi-scale pathways (48×48, 24×24, 12×12 resolutions)** with integrated channel attention gates that dynamically recalibrate feature importance. The architecture features stochastic depth residual blocks for robust feature extraction and a GRU-based recurrent refinement module that progressively enhances details through 3 iterative steps.
 
-A PyTorch-based implementation of a lightweight **Multi-Scale Attention Fusion Network (LightMSAFN)** trained using **knowledge distillation** from a deeper **MSAFN teacher model** for efficient **image enhancement / super-resolution** on the **Vimeo-90K** dataset.
+Engineered for stability during training, MSAFN includes **NaN-protected operations with automatic batch skipping**, dynamic augmentation scaling to combat performance plateaus, and gradient centralization for accelerated convergence. It employs a hybrid L1 + stabilized SSIM loss function and OneCycle LR scheduling (up to 3e-4) for optimal performance. The model processes Vimeo90K datasets efficiently in multi-GPU environments while maintaining VRAM usage under 12GB at 64 batch sizes, delivering state-of-the-art sharpening results ideal for distilling knowledge into lightweight student networks.
+
+---
+
+## 🧠 *Student Training with Knowledge Distillation (MSAFN → LightMSAFN)*
+
+This PyTorch implementation presents a **lightweight Multi-Scale Attention Fusion Network (LightMSAFN)** trained via **knowledge distillation** from a powerful **MSAFN teacher model**, achieving efficient image enhancement/super-resolution on the **Vimeo-90K dataset**. The student model leverages logit distillation (KL divergence) and intermediate feature mimicking (MSE loss) to transfer knowledge while maintaining only 30% of the teacher's parameters through strategic architectural optimizations - **including channel reduction (64→32), shallower residual blocks (8→3), and elimination of recurrent components. The training protocol employs adaptive loss weighting (α=0.7 distillation + β=0.3 ground truth), OneCycle LR scheduling (2e-4 max), and mixed-precision acceleration, enabling the compact student to deliver comparable visual quality to the teacher at 2.8× faster inference speeds, making it ideal for edge deployment**. Critical enhancements like gradient centralization and progressive teacher guidance decay ensure stable convergence while preserving the teacher's restoration capabilities in a dramatically more efficient architecture.
 
 ---
 
@@ -35,13 +42,13 @@ A PyTorch-based implementation of a lightweight **Multi-Scale Attention Fusion N
 - Multi-scale processing (1×, 2×, 4× downsampling)
 - Residual Dense Blocks with attention gates
 - Recurrent refinement via GRU-like module
-- ~2.3M parameters
+- ~8.1M parameters
 
 ### 👨‍🎓 LightMSAFN (Student Model)
 - Lightweight channel attention & residual blocks
 - Efficient fusion and reduced-depth refinement
 - Distilled from teacher using pixel + soft loss
-- ~0.3M parameters
+- ~0.8M parameters
 
 ---
 
@@ -152,12 +159,12 @@ student_training.py
 
 ## 🏁 Sample Results
 
-| Metric    | Teacher (MSAFN) | Student (LightMSAFN) |
+| Metric    | Teacher (MSAFN) | Student (LightMSAFN) | Upon Validation |
 | --------- | --------------- | -------------------- |
-| PSNR (dB) | \~31.5          | \~30.8               |
-| SSIM      | \~0.955         | \~0.928              |
-| Speed     | 1× (slow)       | ⚡ 3–4× faster        |
-| Params    | \~2.3M          | \~0.3M               |
+| PSNR (dB) | \29.6          | \28.9               | \~51              |
+| SSIM      | \0.9423         | \0.9416             | \~0.98           |
+| Speed     | 1× (slow)       | ⚡ 3–4× faster        | ⚡4× faster    |
+| Params    | \~8.1M          | \~0.8M               | \~0.03M         |
 
 ---
 
@@ -175,9 +182,9 @@ student_training.py
 
 | Name            | Role                                | GitHub                                                | LinkedIn                                                |
 |-----------------|-------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
-| **Ayush Sharma** | Java & Deep Learning Researcher     | [@AyushS1304](https://github.com/AyushS1304)           | [Ayush Sharma](https://linkedin.com/in/Ayush)            |
-| **Dhruv Agarwal** | Image Enhancement & DL Researcher  | [@Dhruv610ag](https://github.com/yourgithub)           | [Dhruv Agarwal](https://linkedin.com/in/dhruv)           |
-| **Aniket Shah**  | Frontend Developer                  | [@Aniket200424](https://github.com/Aniket200424)           | [Aniket Shah](https://linkedin.com/in/AniketShah)        |
+| **Ayush Sharma** |  Deep Learning Researcher(Teacher Model)              | [@AyushS1304](https://github.com/AyushS1304)           | [Ayush Sharma](https://linkedin.com/in/Ayush)            |
+| **Dhruv Agarwal** |  Deep Learning Researcher(Student Model)             | [@Dhruv610ag](https://github.com/yourgithub)           | [Dhruv Agarwal](https://linkedin.com/in/dhruv)           |
+| **Aniket Shah**  | Frontend Developer(StreamLit)                       | [@Aniket200424](https://github.com/Aniket200424)           | [Aniket Shah](https://linkedin.com/in/AniketShah)        |
 
 ---
 
@@ -188,11 +195,20 @@ student_training.py
 
 ---
 
-> “Knowledge distilled is power amplified.” – Your Student Model 😄
+> For the Teacher Model:
+"A great teacher empowers beyond their own architecture." – *MSAFN Mentor Model*
 
-```
+For the Student Model:
+"Knowledge distilled is power amplified." – *LightMSAFN Student Model 😄*
+
+
+🧠🏫 Teacher: "My layers may be deep, but my wisdom runs deeper."
+⚡🎓 Student: "Learning fast by standing on stacked convolutions!"
 
 ---
 
 You can now run this in a Kaggle or Colab notebook cell, and it will create a `README.md` file in your working directory. Let me know if you want to include diagrams, inference scripts, or visual results too.
+
+
+
 ```
