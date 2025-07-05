@@ -19,7 +19,8 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # Initialize console logging
-print = lambda *args, **kwargs: __builtins__.print(*args, **kwargs, flush=True)
+def print(*args, **kwargs):
+    return __builtins__.print(*args, **kwargs, flush=True)
 
 # =================================
 # 1. Advanced Model Architecture (Unchanged)
