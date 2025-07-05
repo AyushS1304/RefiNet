@@ -96,8 +96,8 @@ Tianfan Xue, Baian Chen, Jiajun Wu, Donglai Wei, William T. Freeman
 
 ## 🧪 Loss Functions
 
-| Loss Type         | Description                                      |
-|------------------|--------------------------------------------------|
+| Loss Type         | Description                                     |
+|-------------------|-------------------------------------------------|
 | `L1`              | Student vs Ground Truth (pixel reconstruction)  |
 | `MSE`             | Student vs Teacher Output (soft guidance)       |
 | `DistillationLoss`| Combined: `alpha * L1 + (1-alpha) * MSE`        |
@@ -118,13 +118,23 @@ Tianfan Xue, Baian Chen, Jiajun Wu, Donglai Wei, William T. Freeman
 
 ### 📦 Requirements
 ```bash
-pip install torch torchvision numpy pillow tqdm
+pip install streamlit==1.28.0
+torch==2.0.1
+torchvision==0.15.2
+numpy==1.24.3
+Pillow==10.0.0
+opencv-python-headless==4.7.0.72
+tqdm==4.65.0 
+
 ````
 
 ### 🧪 Run Training
-
 ```bash
-python student_training.py
+!python3 teacher_training.py
+``` 
+---
+```bash
+!python3 student_training.py
 ```
 
 ### 🛠️ Configuration
@@ -162,7 +172,7 @@ student_training.py
 | Metric    | Teacher (MSAFN) | Student (LightMSAFN) | Upon Validation |
 | --------- | --------------- | -------------------- |-----------------|
 | PSNR (dB) | \~29.6          | \~28.9               | \~51              |
-| SSIM      | \~0.9423         | \~0.9416             | \~0.98           |
+| SSIM      | \~0.9423        | \~0.9416             | \~0.98           |
 | Speed     | 1× (slow)       | ⚡ 3–4× faster        | ⚡4× faster    |
 | Params    | \~8.1M          | \~0.8M               | \~0.03M         |
 
@@ -195,10 +205,10 @@ student_training.py
 
 ---
 
-> For the Teacher Model:
+
 "A great teacher empowers beyond their own architecture." – *MSAFN Mentor Model*
 
-For the Student Model:
+
 "Knowledge distilled is power amplified." – *LightMSAFN Student Model 😄*
 
 
@@ -211,4 +221,7 @@ You can now run this in a Kaggle or Colab notebook cell, and it will create a `R
 
 
 
+```bash
+git clone https://github.com/AyushS1304/RefiNet.git
 ```
+---
