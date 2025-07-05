@@ -161,8 +161,8 @@ student_training.py
 
 | Metric    | Teacher (MSAFN) | Student (LightMSAFN) | Upon Validation |
 | --------- | --------------- | -------------------- |-----------------|
-| PSNR (dB) | \29.6          | \28.9               | \~51              |
-| SSIM      | \0.9423         | \0.9416             | \~0.98           |
+| PSNR (dB) | \~29.6          | \~28.9               | \~51              |
+| SSIM      | \~0.9423         | \~0.9416             | \~0.98           |
 | Speed     | 1× (slow)       | ⚡ 3–4× faster        | ⚡4× faster    |
 | Params    | \~8.1M          | \~0.8M               | \~0.03M         |
 
