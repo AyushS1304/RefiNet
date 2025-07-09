@@ -11,7 +11,7 @@ This project aims to **compress a powerful image enhancement model** (MSAFN) int
 
 ---
 
-## 🧠 *Teacher Model (MSAFN) Description*
+## 🧠 *Teacher Model (MSAFN) *
 The **Multi-Scale Attention Fusion Network (MSAFN)** is an advanced teacher model designed for high-fidelity image sharpening and restoration. Built for knowledge distillation, it processes images through parallel **multi-scale pathways (48×48, 24×24, 12×12 resolutions)** with integrated channel attention gates that dynamically recalibrate feature importance. The architecture features stochastic depth residual blocks for robust feature extraction and a GRU-based recurrent refinement module that progressively enhances details through 3 iterative steps.
 
 Engineered for stability during training, MSAFN includes **NaN-protected operations with automatic batch skipping**, dynamic augmentation scaling to combat performance plateaus, and gradient centralization for accelerated convergence. It employs a hybrid L1 + stabilized SSIM loss function and OneCycle LR scheduling (up to 3e-4) for optimal performance. The model processes Vimeo90K datasets efficiently in multi-GPU environments while maintaining VRAM usage under 12GB at 64 batch sizes, delivering state-of-the-art sharpening results ideal for distilling knowledge into lightweight student networks.
