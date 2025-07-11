@@ -3,3 +3,4 @@
 /StreamlitApp/venv
 /StreamlitApp/__pycache__
 /utils/__pycache__
+.venv/
