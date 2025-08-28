@@ -111,7 +111,7 @@ with st.sidebar:
     )
     scale_factor = st.slider(
         "Upscaling Factor",
-        min_value=2, max_value=8, value=4, step=1
+        min_value=2, max_value=8, value=5, step=1
     )
     
     st.markdown("---")
@@ -273,6 +273,6 @@ st.markdown("---")
 st.markdown("""
 <div class="footer">
     <p>Intel Project Submission | Knowledge Distillation Framework</p>
-    <p>© 2023 | REFINET Super-Resolution System</p>
+    <p>© 2025 | REFINET Super-Resolution System</p>
 </div>
 """, unsafe_allow_html=True)
