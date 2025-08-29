@@ -118,12 +118,12 @@ with st.sidebar:
     st.markdown("### Model Information")
     st.markdown("""
     - **Teacher Model**: 
-      - Parameters: 12.5M
-      - Depth: 8 residual blocks
+      - Parameters: 8.0M
+      - Depth: 16 residual blocks
       - Recurrent refinement steps: 3
     - **Student Model**: 
-      - Parameters: 1.2M (90% reduction)
-      - Depth: 3 lightweight blocks
+      - Parameters: 0.4M (90% reduction)
+      - Depth: 8 lightweight blocks
       - Recurrent refinement steps: 2 
     """)
     
@@ -253,7 +253,7 @@ st.markdown("""
     <div class="image-panel">
         <h4>Knowledge Distillation</h4>
         <p>Teacher model guides student training</p>
-        <img src="https://miro.medium.com/v2/resize:fit:1400/1*T0WzA7IxYHxww_N5O0j66A.png" width="100%">
+        <img src="" width="100%">
     </div>
     <div class="image-panel">
         <h4>Multi-Scale Processing</h4>
