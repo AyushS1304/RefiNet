@@ -192,9 +192,9 @@ student_training.py
 
 | Name            | Role                                | GitHub                                                | LinkedIn                                                |
 |-----------------|-------------------------------------|--------------------------------------------------------|----------------------------------------------------------|
-| **Ayush Sharma** |  Deep Learning Researcher(Teacher Model)              | [@AyushS1304](https://github.com/AyushS1304)           | [Ayush Sharma](https://linkedin.com/in/Ayush)            |
-| **Dhruv Agarwal** |  Deep Learning Researcher(Student Model)             | [@Dhruv610ag](https://github.com/yourgithub)           | [Dhruv Agarwal](https://linkedin.com/in/dhruv)           |
-| **Aniket Shah**  | Frontend Developer(StreamLit)                       | [@Aniket200424](https://github.com/Aniket200424)           | [Aniket Shah](https://linkedin.com/in/AniketShah)        |
+| **Ayush Sharma** |  Deep Learning Researcher(Teacher Model)              | [@AyushS1304](https://github.com/AyushS1304)           | [Ayush Sharma](http://www.linkedin.com/in/ayush-sharma-6219352b1)            |
+| **Dhruv Agarwal** |  Deep Learning Researcher(Student Model)             | [@Dhruv610ag](https://github.com/Dhruv610ag)         | [Dhruv Agarwal](https://www.linkedin.com/in/dhruv-agarwal-773b32287/)           |
+| **Aniket Shah**  | Frontend Developer(StreamLit)                       | [@Aniket200424](https://github.com/Aniket200424)           | [Aniket Shah](https://www.linkedin.com/in/aniket-shah-b1b008250/)        |
 
 ---
 
@@ -205,17 +205,6 @@ student_training.py
 
 ---
 
-
-"A great teacher empowers beyond their own architecture." – *MSAFN Mentor Model*
-
-
-"Knowledge distilled is power amplified." – *LightMSAFN Student Model 😄*
-
-
-🧠🏫 Teacher: "My layers may be deep, but my wisdom runs deeper."
-⚡🎓 Student: "Learning fast by standing on stacked convolutions!"
-
----
 
 You can now run this in a Kaggle or Colab notebook cell, and it will create a `README.md` file in your working directory. Let me know if you want to include diagrams, inference scripts, or visual results too.
 
